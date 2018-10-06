@@ -36,22 +36,11 @@ namespace task2._3
             FileStream f1 = new FileStream("output.txt", FileMode.OpenOrCreate);
             StreamWriter w = new StreamWriter(f1);
             int tmp = arr[arr.Length - 1];
-            if (arr.Length%2 != 0)
-            {
                 for (int i = arr.Length - 1; i > arr.Length / 2; i--)
                 {
                     arr[i] = arr[i - 1];
                 }
                 arr[arr.Length / 2] = tmp;
-            }
-            else
-            {
-                for (int i = arr.Length - 1; i > (arr.Length / 2-1); i--)
-                {
-                    arr[i] = arr[i - 1];
-                }
-                arr[arr.Length / 2-1] = tmp;
-            }
             foreach (int x in arr)
             {
                 w.Write(x + " ");
