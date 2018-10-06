@@ -36,15 +36,12 @@ namespace task2._3
             FileStream f1 = new FileStream("output.txt", FileMode.OpenOrCreate);
             StreamWriter w = new StreamWriter(f1);
             int tmp = arr[arr.Length - 1];
-            if (arr.Length % 2 != 0&& arr.Length != 2)
+            if (arr.Length == 3)
             {
-                for (int i = arr.Length - 1; i > arr.Length / 2; i--)
-                {
-                    arr[i] = arr[i - 1];
-                }
-                arr[arr.Length / 2] = tmp;
+                arr[2] = arr[1];
+                arr[1] = tmp;
             }
-            if (arr.Length % 2 == 0 && arr.Length != 2)
+            if (arr.Length != 2&&arr.Length!=3)
             {
                 for (int i = arr.Length - 1; i > arr.Length / 2-1; i--)
                 {
