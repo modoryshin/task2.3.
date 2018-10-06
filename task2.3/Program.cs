@@ -41,7 +41,7 @@ namespace task2._3
                 arr[2] = arr[1];
                 arr[1] = tmp;
             }
-            if (arr.Length != 2&&arr.Length!=3)
+            if (arr.Length != 2&&arr.Length!=3&&arr.Length!=1)
             {
                 for (int i = arr.Length - 1; i > arr.Length / 2-1; i--)
                 {
